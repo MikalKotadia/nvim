@@ -1,6 +1,12 @@
+local opt = vim.opt
 -- local autocmd = vim.api.nvim_create_autocmd
-vim.tabstop = 4;
-vim.expandtab = true;
+
+-- Indenting
+opt.expandtab = true
+opt.shiftwidth = 4
+opt.smartindent = true
+opt.tabstop = 4
+opt.softtabstop = 4
   
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
