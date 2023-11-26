@@ -77,6 +77,14 @@ local plugins = {
       }
     end,
   },
+  {
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
