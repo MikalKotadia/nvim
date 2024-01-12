@@ -30,7 +30,26 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
+    opts = {
+      ensure_installed = {
+        -- defaults
+        "vim",
+        "lua",
+
+        -- web dev
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+        -- "vue", "svelte",
+        "python",
+        -- low level
+        "c",
+        "zig",
+      },
+    },
   },
 
   {
@@ -85,6 +104,23 @@ local plugins = {
       "nvim-lua/plenary.nvim",
     },
   },
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    config = function()
+      require("ts_context_commentstring").setup {
+        enable_autocmd = false,
+      }
+    end,
+  },
+  -- {
+  --   "numToStr/Comment.nvim",
+  --   dependencies = {
+  --           "JoosepAlviste/nvim-ts-context-commentstring"
+  --       },
+  --   require("Comment").setup {
+  --     pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+  --   },
+  -- },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

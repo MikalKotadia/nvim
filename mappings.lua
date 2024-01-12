@@ -13,8 +13,7 @@ M.general = {
 
 M.telescope = {
   n = {
-    ["<leader>ff"] = { ":Telescope git_files<cr>", "Search git files", opts = { nowait = true } },
-    ["<leader>fa"] = { ":Telescope find_files<cr>", "Search all files", opts = { nowait = true } },
+    ["<leader>fg"] = { ":Telescope git_files<cr>", "Search git files", opts = { nowait = true } },
   },
 }
 
@@ -23,6 +22,13 @@ M.lazygit = {
     ["<leader>lg"] = { ":LazyGit<cr>", "Open lazygit", opts = { nowait = true } }
   },
 }
+
+M.case_formatting = {
+  v = {
+    ["<leader>tc"] = { ":s/\\%V\\<./\\u&/g<cr>", "convert current line to title case", opts = { nowait = true } }
+  },
+}
+
 -- more keybinds!
 
 return M
