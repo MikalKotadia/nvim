@@ -6,7 +6,7 @@ local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
 -- local servers = { "html", "cssls", "biome", "tsserver", "clangd", "pyright" }
-local servers = { "html", "cssls", "tsserver", "clangd", "pyright", "marksman", "texlab", "java_language_server" }
+local servers = { "html", "cssls", "tsserver", "clangd", "pyright", "marksman", "texlab", "java_language_server", "intelephense"}
 
 diagnostic.config({
 	update_in_insert = true,
@@ -18,6 +18,3 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-
--- 
--- lspconfig.pyright.setup { blabla}
