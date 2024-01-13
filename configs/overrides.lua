@@ -12,6 +12,9 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "python",
+    "java",
+    "php",
   },
   indent = {
     enable = true,
@@ -31,12 +34,23 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
+    "eslint-lsp",
+    "intelephense",
     "deno",
     "prettier",
 
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- misc
+    "ast-grep",
+    "java-language-server",
+    "texlab",
+
+    -- python
+    "pylint",
+    "pyright"
   },
 }
 

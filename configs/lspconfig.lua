@@ -5,7 +5,6 @@ local diagnostic = require("vim.diagnostic")
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
--- local servers = { "html", "cssls", "biome", "tsserver", "clangd", "pyright" }
 local servers = { "html", "cssls", "tsserver", "clangd", "pyright", "marksman", "texlab", "java_language_server", "intelephense"}
 
 diagnostic.config({
