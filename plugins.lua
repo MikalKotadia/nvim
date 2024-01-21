@@ -45,9 +45,13 @@ local plugins = {
         "json",
         -- "vue", "svelte",
         "python",
+
         -- low level
         "c",
         "zig",
+
+        -- other
+        "java"
       },
     },
   },

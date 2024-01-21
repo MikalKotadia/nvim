@@ -7,7 +7,10 @@ opt.shiftwidth = 4
 opt.smartindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
-  
+
+-- don't add comment on new line
+vim.cmd [[autocmd FileType * set formatoptions-=ro]]
+ 
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
 --   pattern = "*",

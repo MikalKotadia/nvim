@@ -45,7 +45,7 @@ M.mason = {
 
     -- misc
     "ast-grep",
-    "java-language-server",
+    "jdtls",
     "texlab",
 
     -- python
