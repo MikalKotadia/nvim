@@ -22,11 +22,11 @@ local plugins = {
     end, -- Override to setup mason-lspconfig
   },
 
-  -- -- override plugin configs
-  -- {
-  --   "williamboman/mason.nvim",
-  --   opts = overrides.mason,
-  -- },
+  -- override plugin configs
+  {
+    "williamboman/mason.nvim",
+    opts = overrides.mason,
+  },
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -79,17 +79,6 @@ local plugins = {
     end,
   },
 
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "html-lsp",
-        "prettier",
-        "stylua",
-      },
-    },
-  },
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
