@@ -14,6 +14,7 @@ M.general = {
 M.telescope = {
   n = {
     ["<leader>fg"] = { ":Telescope git_files<cr>", "Search git files", opts = { nowait = true } },
+    ["<leader>fs"] = { ":lua require('telescope.builtin').lsp_document_symbols({ symbols={'function', 'class', 'method'} })<cr>", "View all functions", opts = { nowait = true } },
   },
 }
 
