@@ -1,4 +1,5 @@
 ---@type MappingsTable
+
 local M = {}
 
 M.general = {
@@ -29,7 +30,11 @@ M.case_formatting = {
     ["<leader>tc"] = { ":s/\\%V\\<./\\u&/g<cr>", "convert current line to title case", opts = { nowait = true } }
   },
 }
-
+M.code_running = {
+  n = {
+    ["<leader>rp"] = { ':!python "%"<cr>', "Run the current buffer in python"}
+  },
+}
 -- more keybinds!
 
 return M
