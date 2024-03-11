@@ -50,7 +50,11 @@ M.mason = {
 
     -- python
     "pylint",
-    "pyright"
+    "pyright",
+    -- java
+    "jdtls",
+
+    "dockerfile-language-server"
   },
 }
 

@@ -6,7 +6,7 @@ local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
 local servers =
-{ "html", "cssls", "tsserver", "clangd", "pyright", "marksman", "texlab", "intelephense", "jdtls" }
+{ "html", "cssls", "tsserver", "clangd", "pyright", "marksman", "texlab", "intelephense", "jdtls", "dockerls" }
 
 diagnostic.config {
     update_in_insert = true,
