@@ -1,77 +1,90 @@
 local M = {}
 
 M.treesitter = {
-  ensure_installed = {
-    "vim",
-    "lua",
-    "html",
-    "css",
-    "javascript",
-    "typescript",
-    "tsx",
-    "c",
-    "markdown",
-    "markdown_inline",
-    "python",
-    "java",
-    "php",
-  },
-  indent = {
-    enable = true,
-    -- disable = {
-    --   "python"
-    -- },
-  },
+    ensure_installed = {
+        "vim",
+        "lua",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "c",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "java",
+        "php",
+    },
+    indent = {
+        enable = true,
+        -- disable = {
+        --   "python"
+        -- },
+    },
 }
 
 M.mason = {
-  ensure_installed = {
-    -- lua stuff
-    "lua-language-server",
-    "stylua",
+    ensure_installed = {
+        -- lua stuff
+        "lua-language-server",
+        "stylua",
 
-    -- web dev stuff
-    "css-lsp",
-    "html-lsp",
-    "typescript-language-server",
-    "eslint-lsp",
-    "intelephense",
-    "deno",
-    "prettier",
+        -- web dev stuff
+        "css-lsp",
+        "html-lsp",
+        "typescript-language-server",
+        "eslint-lsp",
+        "intelephense",
+        "deno",
+        "prettier",
 
-    -- c/cpp stuff
+        -- c/cpp stuff
+        "clangd",
+        "clang-format",
+
+        -- misc
+        "ast-grep",
+        "jdtls",
+        "texlab",
+
+        -- python
+        "pylint",
+        "pyright",
+        -- java
+        "jdtls",
+
+        "dockerfile-language-server",
+    },
+}
+
+M.lsp_servers = {
+    "html",
+    "cssls",
+    "tsserver",
     "clangd",
-    "clang-format",
-
-    -- misc
-    "ast-grep",
-    "jdtls",
-    "texlab",
-
-    -- python
-    "pylint",
     "pyright",
-    -- java
+    "marksman",
+    "texlab",
+    "intelephense",
     "jdtls",
-
-    "dockerfile-language-server"
-  },
+    "dockerls",
 }
 
 -- git support in nvimtree
 M.nvimtree = {
-  git = {
-    enable = true,
-  },
-
-  renderer = {
-    highlight_git = true,
-    icons = {
-      show = {
-        git = true,
-      },
+    git = {
+        enable = true,
     },
-  },
+
+    renderer = {
+        highlight_git = true,
+        icons = {
+            show = {
+                git = true,
+            },
+        },
+    },
 }
 
 return M
