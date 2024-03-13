@@ -39,6 +39,12 @@ M.code_running = {
     },
 }
 
+M.compiling = {
+    n = {
+        ["<leader>col"] = { ':!pdflatex "%"<cr>', "Compile the current tex file to pdf" },
+    },
+}
+
 M.chatgpt = {
     v = {
         ["<leader>ds"] = {':ChatGPTRun docstring<cr>', 'generate docstring with chatgpt'},
