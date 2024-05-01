@@ -89,7 +89,7 @@ local plugins = {
                 -- pre_hook = function()
                 --     return vim.bo.commentstring
                 -- end,
-                 pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+                pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
             }
         end,
     },
@@ -107,6 +107,31 @@ local plugins = {
             "folke/trouble.nvim",
             "nvim-telescope/telescope.nvim",
         },
+    },
+    -- lazy.nvim
+    {
+        "robitx/gp.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("gp").setup{
+                openai_api_key = {'pass', "show", "API/chatgpt"},
+            }
+
+            -- or setup with your own config (see Install > Configuration in Readme)
+            -- require("gp").setup(config)
+
+            -- shortcuts might be setup here (see Usage > Shortcuts in Readme)
+        end,
+    },
+    -- this is not working rn, look into this
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        lazy = false,
+        config = function()
+            require("treesitter-context").setup{
+                enable = true
+            }
+        end
     },
 
     -- {

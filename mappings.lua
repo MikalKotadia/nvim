@@ -42,10 +42,14 @@ M.code_running = {
 M.compiling = {
     n = {
         ["<leader>col"] = { ':!pdflatex "%"<cr>', "Compile the current tex file to pdf" },
+        ["<leader>com"] = { ':!pandoc "%" -o "%:r".pdf <cr><cr>', "Compile the current tex file to pdf" },
     },
 }
 
 M.chatgpt = {
+    n = {
+        ["<leader>gpt"] = {':GpChatToggle popup<cr>', 'Talk to GPT'},
+    },
     v = {
         ["<leader>ds"] = {':ChatGPTRun docstring<cr>', 'generate docstring with chatgpt'},
     },
