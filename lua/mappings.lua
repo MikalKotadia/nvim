@@ -22,11 +22,11 @@ map("n", "<leader>fm", function()
         vim.lsp.buf.format { async = true }
 end, { desc = "LSP Format" })
 
-map("n", "<leader>gD", function()
+map("n", "gD", function()
     vim.lsp.buf.declaration()
 end, { desc = "LSP Declaration" })
 
-map("n", "<leader>gd", function()
+map("n", "gd", function()
     vim.lsp.buf.definition()
 end, { desc = "LSP Definition" })
 
@@ -34,13 +34,17 @@ map("n", "<leader>ra", function()
     vim.lsp.buf.rename()
 end, { desc = "LSP Rename" })
 
-map("n", "<leader>ca", function()
+map("n", "ca", function()
     vim.lsp.buf.code_action()
 end, { desc = "LSP code action" })
 
-map("n", "<leader>gr", function()
+map("n", "gr", function()
     vim.lsp.buf.references()
 end, { desc = "LSP References" })
+
+map("n", "K", function()
+    vim.lsp.buf.hover()
+end, { desc = "LSP Hover" })
 
 
 
