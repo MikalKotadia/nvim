@@ -14,6 +14,7 @@ map("n", "<leader>fs", function()
 end, { desc = "Telescope Find Symbols" })
 map("n", "<leader>fg", ":Telescope git_files<cr>", { desc = "Telescope Find Git Files" })
 map("n", "<leader>ff", ":Telescope find_files<cr>", { desc = "Telescope Find Files" })
+map("n", "<leader>td", ":TodoTelescope<cr>", { desc = "Telescope TODO" })
 
 
 
