@@ -14,7 +14,11 @@ map("n", "<leader>fs", function()
 end, { desc = "Telescope Find Symbols" })
 map("n", "<leader>fg", ":Telescope git_files<cr>", { desc = "Telescope Find Git Files" })
 map("n", "<leader>ff", ":Telescope find_files<cr>", { desc = "Telescope Find Files" })
+map("n", "<leader>fe", ":Telescope diagnostics<cr>", { desc = "Telescope LSP Diagnostics" })
 map("n", "<leader>td", ":TodoTelescope<cr>", { desc = "Telescope TODO" })
+map("n", "gd", ":Telescope lsp_definitions<cr>", { desc = "Telescope LSP Definition" })
+map("n", "gr", ":Telescope lsp_references<cr>", { desc = "Telescope LSP References" })
+
 
 
 
@@ -27,10 +31,6 @@ map("n", "gD", function()
     vim.lsp.buf.declaration()
 end, { desc = "LSP Declaration" })
 
-map("n", "gd", function()
-    vim.lsp.buf.definition()
-end, { desc = "LSP Definition" })
-
 map("n", "<leader>ra", function()
     vim.lsp.buf.rename()
 end, { desc = "LSP Rename" })
@@ -38,10 +38,6 @@ end, { desc = "LSP Rename" })
 map("n", "ca", function()
     vim.lsp.buf.code_action()
 end, { desc = "LSP code action" })
-
-map("n", "gr", function()
-    vim.lsp.buf.references()
-end, { desc = "LSP References" })
 
 map("n", "K", function()
     vim.lsp.buf.hover()
@@ -65,12 +61,8 @@ map("n", "<A-i>", function()
   require("nvchad.term").toggle({ pos = "sp", id ='abc' })
 end, { desc = "Terminal toggle floating" })
 
--- ["<leader>fm"] = {
---       function()
-
---       end,
---       "LSP formatting",
---     },
+-- misc
+map("n", "<leader>ax", ":bufdo bwipeout<cr>", { desc = "Buffer Close All" })
 
 
 -- Disable mappings
@@ -78,3 +70,4 @@ local nomap = vim.keymap.del
 
 nomap("i", "<C-k>")
 nomap("n", "<C-k>")
+
