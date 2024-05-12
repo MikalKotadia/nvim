@@ -15,6 +15,7 @@ M.treesitter = {
         "python",
         "java",
         "php",
+        "go",
     },
     indent = {
         enable = true,
@@ -55,6 +56,7 @@ M.mason = {
         "jdtls",
 
         "dockerfile-language-server",
+        "gopls",
     },
 }
 
@@ -69,6 +71,7 @@ M.lsp_servers = {
     "intelephense",
     "jdtls",
     "dockerls",
+    "gopls",
 }
 
 -- git support in nvimtree
