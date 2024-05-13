@@ -18,7 +18,7 @@ map("n", "<leader>fe", ":Telescope diagnostics<cr>", { desc = "Telescope LSP Dia
 map("n", "<leader>td", ":TodoTelescope<cr>", { desc = "Telescope TODO" })
 map("n", "gd", ":Telescope lsp_definitions<cr>", { desc = "Telescope LSP Definition" })
 map("n", "gr", ":Telescope lsp_references<cr>", { desc = "Telescope LSP References" })
-map("n", "gr", ":Telescope git_status<cr>", { desc = "Telescope Git Status" })
+map("n", "gs", ":Telescope git_status<cr>", { desc = "Telescope Git Status" })
 
 
 
