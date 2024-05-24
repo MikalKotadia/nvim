@@ -16,6 +16,7 @@ M.treesitter = {
         "java",
         "php",
         "go",
+        "json",
     },
     indent = {
         enable = true,
@@ -35,9 +36,8 @@ M.mason = {
         "css-lsp",
         "html-lsp",
         "typescript-language-server",
-        "eslint-lsp",
+        "eslint_d",
         "intelephense",
-        "deno",
         "prettier",
 
         -- c/cpp stuff
@@ -72,6 +72,19 @@ M.lsp_servers = {
     "jdtls",
     "dockerls",
     "gopls",
+}
+
+M.formatters = {
+    formatters_by_ft = {
+        lua = { "stylua" },
+        -- Conform will run multiple formatters sequentially
+        python = { "isort", "black" },
+        -- Use a sub-list to run only the first available formatter
+        javascript = { { "eslint_d" } },
+        typescript = { { "eslint_d" } },
+        javascriptreact = { { "eslint_d" } },
+        typescriptreact = { { "eslint_d" } },
+    },
 }
 
 -- git support in nvimtree

@@ -28,6 +28,10 @@ map("n", "<leader>fm", function()
         vim.lsp.buf.format { async = true }
 end, { desc = "LSP Format" })
 
+map("v", "<leader>fm", function()
+        vim.lsp.buf.format { async = true }
+end, { desc = "LSP Format" })
+
 map("n", "gD", function()
     vim.lsp.buf.declaration()
 end, { desc = "LSP Declaration" })
