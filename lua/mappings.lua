@@ -76,3 +76,5 @@ local nomap = vim.keymap.del
 nomap("i", "<C-k>")
 nomap("n", "<C-k>")
 
+nomap("t", "<esc>")
+
